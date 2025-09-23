@@ -1589,10 +1589,10 @@ lower_uni_SCE <- as.data.frame(matrix(nrow = iteration, ncol = models))
 colnames(lower_uni_SCE) <- c(c('ARIMA', 'BSTS', 'ARIMAX', 'ARIMAX2'))
 ```
 
-Consistent with existing literature, the only exogenous variable considered for inclusion in the ARIMAX model is the Google Trends energy index. This is further supported by a multivariate Granger causality test with lagged values ($p = 1$), where the Google Trends energy index is the only variable showing a significance level below 1% across all considered indexes. However, the EPU index could also be a potential candidate for inclusion in the model (Table 7 in the article).
+Consistent with existing literature, the only exogenous variable considered for inclusion in the ARIMAX model is the Google Trends energy index. This is further supported by a multivariate Granger causality test with lagged values ($p = 1$), where the Google Trends energy index is the only variable showing a significance level below 1% across all four considered indexes. However, the EPU index could also be a potential candidate for inclusion in the model (Table 7 in the article).
 
 ```{r, warning = FALSE}
-#Granger causality (multivariate)
+#Granger causality (multivariate). In the paper, the reported value is the p-value corresponding to the F-statistic (first table).
 vm = VAR(data_pred[1:110, c(1, 3:4, 6:13)], p = 1, type = 'both')
 granger_causality(vm)
 vm = VAR(data_pred[1:110, c(15, 3:4, 6:13)], p = 1, type = 'both')
@@ -2069,7 +2069,7 @@ grid.arrange(
   p4,
   ncol = 2,
   top = textGrob(
-    "Expanding window one-step-ahead forecasts",
+    "",
     gp = gpar(fontsize = 20, font = 3)
   )
 ) +
