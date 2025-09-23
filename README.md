@@ -3,14 +3,11 @@ Climate change has emerged as a significant global concern that is attracting in
 
   # Info
 The repository includes the following folders,
-* *[Working paper](https://github.com/GianVriz/Green-bubble-detection-and-propagation-in-the-energy-market/tree/main/Working%20paper)* \
+* *[Working paper](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Working%20paper)* \
     Files related to the working paper.
- 
-* *[Code](https://github.com/GianVriz/Green-bubble-detection-and-propagation-in-the-energy-market/tree/main/Code)* \
-  Code used for simulations and analysis.
 
- * *[Data](https://github.com/GianVriz/Green-bubble-a-four-stage-paradigm-for-detection-and-propagation/tree/main/Data)* \
-   Data related to the working paper.
+ * *[Code and data](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code%20and%20Data)* \
+   Code and data related to the working paper.
 
 [RENIXX World - Global Stock Index](https://www.renewable-energy-industry.com/stocks/)
 
