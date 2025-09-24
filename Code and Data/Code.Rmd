@@ -544,7 +544,7 @@ test <-
   processStream(c(0, diff(log(renixx_w$close))),
                 "Kolmogorov-Smirnov",
                 ARL0 = 5000,
-                startup = 200) #Startup = 200 (20%) and ARL0 = 500 are default values.
+                startup = 200) #Startup = 200 (20%) and ARL0 = 5000 are default values.
 breack <- renixx_w$date[test$changePoints]
 plot(
   renixx_w$date,
