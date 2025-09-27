@@ -13,50 +13,28 @@ The following chunks are related to the article *Green Bubbles: A Four-Stage Par
 
 ```{r, warning = FALSE}
 library(bbdetection)
-library(blorr)
+library(bruceR)
 library(bsts)
-library(car)
-library(changepoint)
-library(corrplot)
 library(cpm)
-library(DescTools)
-library(devtools)
 library(dplyr)
-library(epiDisplay)
 library(exuber)
-library(factoextra)
 library(fDMA)
+library(forecast)
 library(ggfortify)
 library(ggplot2)
-library(ggpmisc)
 library(ghyp)
-library(glmnet)
+library(grid)
 library(gridExtra)
-library(hrbrthemes)
-library(lmtest)
 library(lubridate)
+library(MCS)
 library(Metrics)
-library(ModelMetrics)
-library(modelr)
-library(oddsratio)
-library(pscl)
-library(psych)
-library(qcc)
-library(rbmi)
-library(Rbeast)
-library(readr)
+library(multDM)
 library(readxl)
-library(Rlibeemd)
 library(rugarch)
-library(Rssa)
-library(strucchange)
-library(tictoc)
-library(tidyr)
 library(tseries)
 library(urca)
 library(vars)
-library(visreg)
-library(xtable)
+library(xts)
 library(zoo)
 ```
 
@@ -195,9 +173,9 @@ Below is a graphical representation of potential patterns of bubble collapse as 
 
 ```{r, warning = FALSE, echo = FALSE, results = 'hide', include = TRUE, fig.width = 14, fig.height = 8}
 #NOTE: These plots are for reference only and not included in the article.
-autoplot(disturbing)
-autoplot(smooth)
-autoplot(sudden)
+exuber::autoplot(disturbing)
+exuber::autoplot(smooth)
+exuber::autoplot(sudden)
 ```
 
 The Backward Sup ADF(BSADF) is compared with the Kolmogorov-Smirnov Change Point Detection Model (KS-CPM). The disturbing path is initially examined, followed by 1000 simulations.
@@ -1246,32 +1224,7 @@ summary(vecm_model$rlm)[2]
 logLik_cajorls(vecm_model)
 ```
 
-The following chunks are dedicated to analyzing the dynamics of bubbles in the RENIXX index. For this analysis, the following new libraries are required (please ensure they are installed before running the code).
-
-```{r, warning = FALSE}
-library(aTSA)
-library(bestNormalize)
-library(bruceR)
-library(BVAR)
-library(caret)
-library(fANCOVA)
-library(fGarch)
-library(forecast)
-library(fpp)
-library(goft)
-library(grid)
-library(HoRM)
-library(lattice)
-library(MCS)
-library(multDM)
-library(parameters)
-library(plotmo)
-library(stats)
-library(TSA)
-library(tsDyn)
-library(tsoutliers)
-library(tvReg)
-```
+The following chunks are dedicated to analyzing the dynamics of bubbles in the RENIXX index. 
 
 Each time series is divided according to the three stages detected by the KS-CPM.
 
