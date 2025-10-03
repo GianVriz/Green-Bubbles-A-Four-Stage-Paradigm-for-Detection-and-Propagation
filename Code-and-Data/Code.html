@@ -11,7 +11,7 @@
 
 <meta name="author" content="Gian Luca Vriz, Luigi Grossi" />
 
-<meta name="date" content="2025-09-23" />
+<meta name="date" content="2025-10-03" />
 
 <title>Green Bubbles: A Four-Stage Paradigm for Detection and Propagation (resubmission 2.0)</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">Green Bubbles: A Four-Stage Paradigm for
 Detection and Propagation (resubmission 2.0)</h1>
 <h4 class="author">Gian Luca Vriz, Luigi Grossi</h4>
-<h4 class="date">2025-09-23</h4>
+<h4 class="date">2025-10-03</h4>
 
 </div>
 
@@ -364,9 +364,49 @@ Detection and Propagation (resubmission 2.0)</h1>
 Four-Stage Paradigm for Detection and Propagation</em>. The project
 requires the libraries listed below (please ensure they are installed
 before running the code).</p>
+<p>After installing all the required packages, the libraries are
+loaded.</p>
 <pre class="r"><code>library(bbdetection)
-library(blorr)
-library(bsts)</code></pre>
+library(bruceR)</code></pre>
+<pre><code>## 
+## bruceR (v2024.6)
+## Broadly Useful Convenient and Efficient R functions
+## 
+## Packages also loaded:
+## ✔ data.table ✔ emmeans
+## ✔ dplyr      ✔ lmerTest
+## ✔ tidyr      ✔ effectsize
+## ✔ stringr    ✔ performance
+## ✔ ggplot2    ✔ interactions
+## 
+## Main functions of `bruceR`:
+## cc()             Describe()  TTEST()
+## add()            Freq()      MANOVA()
+## .mean()          Corr()      EMMEANS()
+## set.wd()         Alpha()     PROCESS()
+## import()         EFA()       model_summary()
+## print_table()    CFA()       lavaan_summary()
+## 
+## For full functionality, please install all dependencies:
+## install.packages(&quot;bruceR&quot;, dep=TRUE)
+## 
+## Online documentation:
+## https://psychbruce.github.io/bruceR
+## 
+## To use this package in publications, please cite:
+## Bao, H.-W.-S. (2024). bruceR: Broadly useful convenient and efficient R functions (Version 2024.6) [Computer software]. https://CRAN.R-project.org/package=bruceR</code></pre>
+<pre><code>## 
+## NEWS: A new version of bruceR (2025.8) is available (2025-08-20)!
+## 
+## ***** Please update *****
+## install.packages(&quot;bruceR&quot;, dep=TRUE)</code></pre>
+<pre><code>## 
+## These packages are dependencies of `bruceR` but not installed:
+## - pacman, openxlsx, ggtext, see, phia, MuMIn, BayesFactor, GGally
+## 
+## ***** Install all dependencies *****
+## install.packages(&quot;bruceR&quot;, dep=TRUE)</code></pre>
+<pre class="r"><code>library(bsts)</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: BoomSpikeSlab</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: Boom</code></pre>
 <pre><code>## 
@@ -382,38 +422,13 @@ library(bsts)</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: zoo</code></pre>
 <pre><code>## 
 ## Caricamento pacchetto: &#39;zoo&#39;</code></pre>
+<pre><code>## I seguenti oggetti sono mascherati da &#39;package:data.table&#39;:
+## 
+##     yearmon, yearqtr</code></pre>
 <pre><code>## I seguenti oggetti sono mascherati da &#39;package:base&#39;:
 ## 
 ##     as.Date, as.Date.numeric</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: xts</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;bsts&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:BoomSpikeSlab&#39;:
-## 
-##     SuggestBurn</code></pre>
-<pre class="r"><code>library(car)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: carData</code></pre>
-<pre class="r"><code>library(changepoint)</code></pre>
-<pre><code>## Successfully loaded changepoint package version 2.2.4
-##  See NEWS for details of changes.</code></pre>
-<pre class="r"><code>library(corrplot)</code></pre>
-<pre><code>## corrplot 0.92 loaded</code></pre>
-<pre class="r"><code>library(cpm)
-library(DescTools)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;DescTools&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:car&#39;:
-## 
-##     Recode</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:bsts&#39;:
-## 
-##     Quarter</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Boom&#39;:
-## 
-##     IsOdd</code></pre>
-<pre class="r"><code>library(devtools)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: usethis</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
 <pre><code>## 
 ## ######################### Warning from &#39;xts&#39; package ##########################
 ## #                                                                             #
@@ -430,51 +445,37 @@ library(DescTools)</code></pre>
 ## #                                                                             #
 ## ###############################################################################</code></pre>
 <pre><code>## 
-## Caricamento pacchetto: &#39;dplyr&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:car&#39;:
-## 
-##     recode</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:xts&#39;:
+## Caricamento pacchetto: &#39;xts&#39;</code></pre>
+<pre><code>## I seguenti oggetti sono mascherati da &#39;package:data.table&#39;:
 ## 
 ##     first, last</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:stats&#39;:
+<pre><code>## I seguenti oggetti sono mascherati da &#39;package:dplyr&#39;:
 ## 
-##     filter, lag</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(epiDisplay)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: foreign</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: survival</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: MASS</code></pre>
+##     first, last</code></pre>
 <pre><code>## 
-## Caricamento pacchetto: &#39;MASS&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:dplyr&#39;:
+## Caricamento pacchetto: &#39;bsts&#39;</code></pre>
+<pre><code>## Il seguente oggetto è mascherato da &#39;package:BoomSpikeSlab&#39;:
 ## 
-##     select</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: nnet</code></pre>
-<pre class="r"><code>library(exuber)</code></pre>
+##     SuggestBurn</code></pre>
+<pre class="r"><code>library(cpm)
+library(dplyr)
+library(exuber)</code></pre>
 <pre><code>## 
 ## Caricamento pacchetto: &#39;exuber&#39;</code></pre>
 <pre><code>## I seguenti oggetti sono mascherati da &#39;package:zoo&#39;:
 ## 
 ##     index, index&lt;-</code></pre>
-<pre class="r"><code>library(factoextra)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: ggplot2</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;ggplot2&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:epiDisplay&#39;:
-## 
-##     alpha</code></pre>
-<pre><code>## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa</code></pre>
 <pre class="r"><code>library(fDMA)</code></pre>
 <pre><code>## Registered S3 method overwritten by &#39;quantmod&#39;:
 ##   method            from
 ##   as.zoo.data.frame zoo</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;gplots&#39;:
-##   method         from     
-##   reorder.factor DescTools</code></pre>
-<pre class="r"><code>library(ggfortify)</code></pre>
+<pre><code>## 
+## Caricamento pacchetto: &#39;fDMA&#39;</code></pre>
+<pre><code>## Il seguente oggetto è mascherato da &#39;package:effectsize&#39;:
+## 
+##     standardize</code></pre>
+<pre class="r"><code>library(forecast)
+library(ggfortify)</code></pre>
 <pre><code>## Registered S3 methods overwritten by &#39;ggfortify&#39;:
 ##   method                 from    
 ##   autoplot.Arima         forecast
@@ -490,162 +491,67 @@ library(DescTools)</code></pre>
 ##   fortify.ts             forecast
 ##   residuals.ar           forecast</code></pre>
 <pre class="r"><code>library(ggplot2)
-library(ggpmisc)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: ggpp</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;ggpp&#39;:
-##   method                  from   
-##   heightDetails.titleGrob ggplot2
-##   widthDetails.titleGrob  ggplot2</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;ggpp&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:ggplot2&#39;:
-## 
-##     annotate</code></pre>
-<pre class="r"><code>library(ghyp)</code></pre>
+library(ghyp)</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: numDeriv</code></pre>
-<pre class="r"><code>library(glmnet)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: Matrix</code></pre>
-<pre><code>## Loaded glmnet 4.1-8</code></pre>
-<pre class="r"><code>library(gridExtra)</code></pre>
+<pre><code>## Caricamento del pacchetto richiesto: MASS</code></pre>
+<pre><code>## 
+## Caricamento pacchetto: &#39;MASS&#39;</code></pre>
+<pre><code>## Il seguente oggetto è mascherato da &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<pre class="r"><code>library(grid)
+library(gridExtra)</code></pre>
 <pre><code>## 
 ## Caricamento pacchetto: &#39;gridExtra&#39;</code></pre>
 <pre><code>## Il seguente oggetto è mascherato da &#39;package:dplyr&#39;:
 ## 
 ##     combine</code></pre>
-<pre class="r"><code>library(hrbrthemes)
-library(lmtest)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;lmtest&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:epiDisplay&#39;:
-## 
-##     lrtest</code></pre>
 <pre class="r"><code>library(lubridate)</code></pre>
 <pre><code>## 
 ## Caricamento pacchetto: &#39;lubridate&#39;</code></pre>
+<pre><code>## I seguenti oggetti sono mascherati da &#39;package:data.table&#39;:
+## 
+##     hour, isoweek, mday, minute, month, quarter, second, wday, week,
+##     yday, year</code></pre>
 <pre><code>## I seguenti oggetti sono mascherati da &#39;package:base&#39;:
 ## 
 ##     date, intersect, setdiff, union</code></pre>
-<pre class="r"><code>library(Metrics)
-library(ModelMetrics)</code></pre>
+<pre class="r"><code>library(MCS)
+library(Metrics)</code></pre>
 <pre><code>## 
-## Caricamento pacchetto: &#39;ModelMetrics&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:Metrics&#39;:
+## Caricamento pacchetto: &#39;Metrics&#39;</code></pre>
+<pre><code>## Il seguente oggetto è mascherato da &#39;package:forecast&#39;:
 ## 
-##     auc, ce, logLoss, mae, mse, msle, precision, recall, rmse, rmsle</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:ghyp&#39;:
-## 
-##     sensitivity</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:survival&#39;:
-## 
-##     brier</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:base&#39;:
-## 
-##     kappa</code></pre>
-<pre class="r"><code>library(modelr)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;modelr&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:ModelMetrics&#39;:
+##     accuracy</code></pre>
+<pre><code>## I seguenti oggetti sono mascherati da &#39;package:performance&#39;:
 ## 
 ##     mae, mse, rmse</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:Metrics&#39;:
-## 
-##     mae, mape, mse, rmse</code></pre>
-<pre class="r"><code>library(oddsratio)
-library(pscl)</code></pre>
-<pre><code>## Classes and Methods for R originally developed in the
-## Political Science Computational Laboratory
-## Department of Political Science
-## Stanford University (2002-2015),
-## by and under the direction of Simon Jackman.
-## hurdle and zeroinfl functions by Achim Zeileis.</code></pre>
-<pre class="r"><code>library(psych)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;psych&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:ggplot2&#39;:
-## 
-##     %+%, alpha</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:epiDisplay&#39;:
-## 
-##     alpha, cs, lookup</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:DescTools&#39;:
-## 
-##     AUC, ICC, SD</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:car&#39;:
-## 
-##     logit</code></pre>
-<pre class="r"><code>library(qcc)</code></pre>
-<pre><code>## Package &#39;qcc&#39; version 2.7</code></pre>
-<pre><code>## Type &#39;citation(&quot;qcc&quot;)&#39; for citing this R package in publications.</code></pre>
-<pre class="r"><code>library(rbmi)</code></pre>
-<pre><code>## mmrm() registered as car::Anova extension</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;rbmi&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Matrix&#39;:
-## 
-##     expand</code></pre>
-<pre class="r"><code>library(Rbeast)
-library(readr)
+<pre class="r"><code>library(multDM)
 library(readxl)
-library(Rlibeemd)</code></pre>
-<pre><code>## If you installed Rlibeemd from CRAN, consider installing again from GitHub if you wish to support for parallel computations. See https://github.com/helske/Rlibeemd for details or use devtools::install_github(&#39;helske/Rlibeemd&#39;)
-## 
-## Please cite Rlibeemd in publications by using: 
-## Luukko PJ, Helske J, Räsänen E (2016). Introducing libeemd:A program package for performing the ensemble empirical mode decomposition.Computational Statistics, 31(2), 545-557. doi: 10.1007/s00180-015-0603-9.</code></pre>
-<pre class="r"><code>library(rugarch)</code></pre>
+library(rugarch)</code></pre>
 <pre><code>## Caricamento del pacchetto richiesto: parallel</code></pre>
 <pre><code>## 
 ## Caricamento pacchetto: &#39;rugarch&#39;</code></pre>
 <pre><code>## Il seguente oggetto è mascherato da &#39;package:exuber&#39;:
 ## 
 ##     report</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:changepoint&#39;:
-## 
-##     likelihood</code></pre>
 <pre><code>## Il seguente oggetto è mascherato da &#39;package:stats&#39;:
 ## 
 ##     sigma</code></pre>
-<pre class="r"><code>library(Rssa)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: svd</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: forecast</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;forecast&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Metrics&#39;:
-## 
-##     accuracy</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:DescTools&#39;:
-## 
-##     BoxCox</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;Rssa&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:stats&#39;:
-## 
-##     decompose</code></pre>
-<pre class="r"><code>library(strucchange)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: sandwich</code></pre>
-<pre class="r"><code>library(tictoc)
-library(tidyr)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;tidyr&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:rbmi&#39;:
-## 
-##     expand</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:Matrix&#39;:
-## 
-##     expand, pack, unpack</code></pre>
 <pre class="r"><code>library(tseries)
 library(urca)
 library(vars)</code></pre>
+<pre><code>## Caricamento del pacchetto richiesto: strucchange</code></pre>
+<pre><code>## Caricamento del pacchetto richiesto: sandwich</code></pre>
 <pre><code>## 
-## Caricamento pacchetto: &#39;vars&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Rssa&#39;:
+## Caricamento pacchetto: &#39;strucchange&#39;</code></pre>
+<pre><code>## Il seguente oggetto è mascherato da &#39;package:stringr&#39;:
 ## 
-##     roots</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:DescTools&#39;:
-## 
-##     Phi</code></pre>
-<pre class="r"><code>library(visreg)
-library(xtable)
-library(zoo)</code></pre>
+##     boundary</code></pre>
+<pre><code>## Caricamento del pacchetto richiesto: lmtest</code></pre>
+<pre class="r"><code>library(xts)
+library(zoo)
+options(warn = -1)</code></pre>
 </div>
 <div id="data-generation-process-and-simulations" class="section level1">
 <h1>Data generation Process and simulations</h1>
@@ -912,7 +818,7 @@ test &lt;-
   processStream(c(0, diff(log(renixx_w$close))),
                 &quot;Kolmogorov-Smirnov&quot;,
                 ARL0 = 5000,
-                startup = 200) #Startup = 200 (20%) and ARL0 = 500 are default values.
+                startup = 200) #Startup = 200 (20%) and ARL0 = 5000 are default values.
 breack &lt;- renixx_w$date[test$changePoints]
 plot(
   renixx_w$date,
@@ -1873,253 +1779,7 @@ summary(vecm_model$rlm)[2]</code></pre>
 <pre class="r"><code>logLik_cajorls(vecm_model)</code></pre>
 <pre><code>## [1] 31.74526</code></pre>
 <p>The following chunks are dedicated to analyzing the dynamics of
-bubbles in the RENIXX index. For this analysis, the following new
-libraries are required (please ensure they are installed before running
-the code).</p>
-<pre class="r"><code>library(aTSA)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;aTSA&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:vars&#39;:
-## 
-##     arch.test</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:tseries&#39;:
-## 
-##     adf.test, kpss.test, pp.test</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:forecast&#39;:
-## 
-##     forecast</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:graphics&#39;:
-## 
-##     identify</code></pre>
-<pre class="r"><code>library(bestNormalize)</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;butcher&#39;:
-##   method                 from    
-##   as.character.dev_topic generics</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;lava&#39;:
-##   method    from  
-##   print.sim exuber</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;bestNormalize&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:MASS&#39;:
-## 
-##     boxcox</code></pre>
-<pre class="r"><code>library(bruceR)</code></pre>
-<pre><code>## 
-## bruceR (v2024.6)
-## Broadly Useful Convenient and Efficient R functions
-## 
-## Packages also loaded:
-## ✔ data.table ✔ emmeans
-## ✔ dplyr      ✔ lmerTest
-## ✔ tidyr      ✔ effectsize
-## ✔ stringr    ✔ performance
-## ✔ ggplot2    ✔ interactions
-## 
-## Main functions of `bruceR`:
-## cc()             Describe()  TTEST()
-## add()            Freq()      MANOVA()
-## .mean()          Corr()      EMMEANS()
-## set.wd()         Alpha()     PROCESS()
-## import()         EFA()       model_summary()
-## print_table()    CFA()       lavaan_summary()
-## 
-## For full functionality, please install all dependencies:
-## install.packages(&quot;bruceR&quot;, dep=TRUE)
-## 
-## Online documentation:
-## https://psychbruce.github.io/bruceR
-## 
-## To use this package in publications, please cite:
-## Bao, H.-W.-S. (2024). bruceR: Broadly useful convenient and efficient R functions (Version 2024.6) [Computer software]. https://CRAN.R-project.org/package=bruceR</code></pre>
-<pre><code>## 
-## NEWS: A new version of bruceR (2025.8) is available (2025-08-20)!
-## 
-## ***** Please update *****
-## install.packages(&quot;bruceR&quot;, dep=TRUE)</code></pre>
-<pre><code>## 
-## These packages are dependencies of `bruceR` but not installed:
-## - pacman, openxlsx, ggtext, see, phia, MuMIn, BayesFactor, GGally
-## 
-## ***** Install all dependencies *****
-## install.packages(&quot;bruceR&quot;, dep=TRUE)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;bruceR&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:epiDisplay&#39;:
-## 
-##     cc</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:DescTools&#39;:
-## 
-##     %^%, Freq</code></pre>
-<pre class="r"><code>library(BVAR)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;BVAR&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:performance&#39;:
-## 
-##     rmse</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:vars&#39;:
-## 
-##     fevd, irf</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:modelr&#39;:
-## 
-##     rmse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:ModelMetrics&#39;:
-## 
-##     rmse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Metrics&#39;:
-## 
-##     rmse</code></pre>
-<pre class="r"><code>library(caret)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: lattice</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;lattice&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:epiDisplay&#39;:
-## 
-##     dotplot</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;caret&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:ModelMetrics&#39;:
-## 
-##     confusionMatrix, precision, recall, sensitivity, specificity</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:Metrics&#39;:
-## 
-##     precision, recall</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:ghyp&#39;:
-## 
-##     sensitivity</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:survival&#39;:
-## 
-##     cluster</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:DescTools&#39;:
-## 
-##     MAE, RMSE</code></pre>
-<pre class="r"><code>library(fANCOVA)</code></pre>
-<pre><code>## fANCOVA 0.6-1 loaded</code></pre>
-<pre class="r"><code>library(fGarch)</code></pre>
-<pre><code>## NOTE: Packages &#39;fBasics&#39;, &#39;timeDate&#39;, and &#39;timeSeries&#39; are no longer
-## attached to the search() path when &#39;fGarch&#39; is attached.
-## 
-## If needed attach them yourself in your R script by e.g.,
-##         require(&quot;timeSeries&quot;)</code></pre>
-<pre class="r"><code>library(forecast)
-library(fpp)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: fma</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;fma&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:emmeans&#39;:
-## 
-##     pigs</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:MASS&#39;:
-## 
-##     cement, housing, petrol</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: expsmooth</code></pre>
-<pre class="r"><code>library(goft)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: fitdistrplus</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;fitdistrplus&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:rugarch&#39;:
-## 
-##     fitdist</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: sn</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: stats4</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;sn&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:psych&#39;:
-## 
-##     tr</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:lubridate&#39;:
-## 
-##     dst</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:stats&#39;:
-## 
-##     sd</code></pre>
-<pre class="r"><code>library(grid)
-library(HoRM)
-library(lattice)
-library(MCS)
-library(multDM)
-library(parameters)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;parameters&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:caret&#39;:
-## 
-##     compare_models</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:bruceR&#39;:
-## 
-##     print_table</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:xtable&#39;:
-## 
-##     display</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:epiDisplay&#39;:
-## 
-##     ci</code></pre>
-<pre class="r"><code>library(plotmo)</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: Formula</code></pre>
-<pre><code>## Caricamento del pacchetto richiesto: plotrix</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;plotrix&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Rssa&#39;:
-## 
-##     clplot</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:psych&#39;:
-## 
-##     rescale</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;plotmo&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:urca&#39;:
-## 
-##     plotres</code></pre>
-<pre class="r"><code>library(stats)
-library(TSA)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;TSA&#39;:
-##   method       from    
-##   fitted.Arima forecast
-##   plot.Arima   forecast</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;TSA&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:parameters&#39;:
-## 
-##     kurtosis, skewness</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:readr&#39;:
-## 
-##     spec</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:stats&#39;:
-## 
-##     acf, arima</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:utils&#39;:
-## 
-##     tar</code></pre>
-<pre class="r"><code>library(tsDyn)</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;tsDyn&#39;</code></pre>
-<pre><code>## I seguenti oggetti sono mascherati da &#39;package:BVAR&#39;:
-## 
-##     fevd, irf</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:performance&#39;:
-## 
-##     mse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:modelr&#39;:
-## 
-##     mse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:ModelMetrics&#39;:
-## 
-##     mse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:Metrics&#39;:
-## 
-##     mse</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:DescTools&#39;:
-## 
-##     MAPE</code></pre>
-<pre class="r"><code>library(tsoutliers)
-library(tvReg)</code></pre>
-<pre><code>## Funded by the Horizon 2020. Framework Programme of the European Union.</code></pre>
-<pre><code>## 
-## Caricamento pacchetto: &#39;tvReg&#39;</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:aTSA&#39;:
-## 
-##     forecast</code></pre>
-<pre><code>## Il seguente oggetto è mascherato da &#39;package:forecast&#39;:
-## 
-##     forecast</code></pre>
+bubbles in the RENIXX index.</p>
 <p>Each time series is divided according to the three stages detected by
 the KS-CPM.</p>
 <pre class="r"><code>#Codification
@@ -3452,8 +3112,8 @@ MCSprocedure(Loss,
              B = 5000,
              statistic = &quot;TR&quot;)</code></pre>
 <pre><code>## 
-## Model ARIMA eliminated 2025-09-23 19:06:35.762304
-## Model BSTS eliminated 2025-09-23 19:06:37.261179
+## Model ARIMA eliminated 2025-10-03 14:03:54.909417
+## Model BSTS eliminated 2025-10-03 14:03:56.502371
 ## ###########################################################################################################################
 ## Superior Set Model created   :
 ##         Rank_M         v_M  MCS_M Rank_R         v_R  MCS_R          Loss
@@ -3476,7 +3136,7 @@ MCSprocedure(Loss,
 ## 
 ## Number of eliminated models  :   2
 ## Statistic    :   TR
-## Elapsed Time :   Time difference of 4.77212906 secs</code></pre>
+## Elapsed Time :   Time difference of 4.63862395 secs</code></pre>
 <p>The ARIMAX models, with the energy index as an exogenous variable,
 are identified as the best models based on both RMSE and MAPE, as well
 as robustness checks such as the Diebold-Mariano test and the Model
