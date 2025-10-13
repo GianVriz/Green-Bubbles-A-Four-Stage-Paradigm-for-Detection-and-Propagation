@@ -6,7 +6,7 @@ The repository includes the following folders,
 * *[Working paper](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Working%20paper)* \
     Files related to the working paper.
 
- * *[Code and data](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code%20and%20Data)* \
+ * *[Code and data](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code-and-Data)* \
    Code and data related to the working paper.
 
 [RENIXX World - Global Stock Index](https://www.renewable-energy-industry.com/stocks/)
@@ -14,7 +14,7 @@ The repository includes the following folders,
 [Energy Index - Google Trends](https://trends.google.it/trends/explore?date=all&q=Energy%20index&hl=it)
 
  <p align="center">
- <img src="https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/blob/main/Working%20paper/Bubble_d.png" alt="drawing" width="900" height="400"/> 
+ <img src="https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/blob/main/Working-paper/Bubble_d.png" alt="drawing" width="900" height="400"/> 
 
  ## Authors
 * Gian Luca Vriz - [GianVriz](https://github.com/GianVriz)
