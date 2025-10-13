@@ -3,7 +3,7 @@ Climate change has emerged as a significant global concern that is attracting in
 
   # Info
 The repository includes the following folders,
-* *[Working paper](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Working%20paper)* \
+* *[Working paper](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Working-paper)* \
     Files related to the working paper.
 
  * *[Code and data](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code-and-Data)* \
