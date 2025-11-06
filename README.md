@@ -10,7 +10,7 @@ The repository includes the following folders,
    Full version of the code and data related to the working paper.
 
   * *[Code and data restircted](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code-and-Data-Restricted)* \
-   A restricted version of the code and data associated with the working paper.
+   A restricted version of the code and data corresponding to the final version of the working paper.
 
 [RENIXX World - Global Stock Index](https://www.renewable-energy-industry.com/stocks/)
 
