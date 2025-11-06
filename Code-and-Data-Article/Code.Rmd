@@ -1432,10 +1432,10 @@ real_data <- c(data_pred$Renixx[74:110],
                data_pred$iShares_GCE[74:110],
                data_pred$SP_GCE[74:110])
 #SMAPE
-cat("SMAPE ARIMA:", round(Metrics::smape(predictions_uni[, 1], real_data), 5) * 100, "\n") #By 100 to obtain the percentage
-cat("SMAPE BSTS:", round(Metrics::smape(predictions_uni[, 2], real_data), 5) * 100, "\n")
-cat("SMAPE ARIMAX_t1:", round(Metrics::smape(predictions_uni[, 3], real_data), 5) * 100, "\n")
-cat("SMAPE ARIMAX_t:", round(Metrics::smape(predictions_uni[, 4], real_data), 5) * 100, "\n")
+cat("SMAPE ARIMA (%):", round(Metrics::smape(predictions_uni[, 1], real_data), 5) * 100, "\n") #By 100 to obtain the percentage
+cat("SMAPE BSTS (%):", round(Metrics::smape(predictions_uni[, 2], real_data), 5) * 100, "\n")
+cat("SMAPE ARIMAX_t1 (%):", round(Metrics::smape(predictions_uni[, 3], real_data), 5) * 100, "\n")
+cat("SMAPE ARIMAX_t (%):", round(Metrics::smape(predictions_uni[, 4], real_data), 5) * 100, "\n")
 #RMSE
 cat("RMSE ARIMA:", round(Metrics::rmse(predictions_uni[, 1], real_data), 3), "\n")
 cat("RMSE BSTS:", round(Metrics::rmse(predictions_uni[, 2], real_data), 3), "\n")
@@ -1917,4 +1917,5 @@ Month <- as.Date(cut(MSCI_Alternative_Energy_Price$Date, "month"))
 MSCI_Alternative_Energy_Price$Close <- as.numeric(gsub(",", "", MSCI_Alternative_Energy_Price$Close))
 MSCI_Alternative_Energy_Price_m <- aggregate(Close ~ Month, MSCI_Alternative_Energy_Price, mean)
 MSCI_Alternative_Energy_Price_m$Close <- as.numeric(MSCI_Alternative_Energy_Price_m$Close)
+
 ```
