@@ -36,8 +36,6 @@ install.packages("urca")
 install.packages("vars")
 install.packages("xts")
 install.packages("zoo")
-install.packages("doParallel")
-install.packages("RhpcBLASctl")
 ```
 
 After installing all the required packages, the libraries are loaded.
@@ -61,7 +59,6 @@ library(MCS)
 library(Metrics)
 library(multDM)
 library(readxl)
-library(RhpcBLASctl)
 library(rugarch)
 library(tseries)
 library(urca)
@@ -69,7 +66,6 @@ library(vars)
 library(xts)
 library(zoo)
 library(base)
-library(doParallel)
 ```
 
 # Data generation Process and simulations
@@ -1919,4 +1915,5 @@ To ensure full reproducibility, the following chunk displays the R version, plat
 
 ```{r session-info}
 sessionInfo()
+
 ```
