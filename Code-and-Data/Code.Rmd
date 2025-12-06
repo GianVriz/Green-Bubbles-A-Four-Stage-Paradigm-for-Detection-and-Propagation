@@ -13,7 +13,7 @@ The following chunks are related to the article *Green Bubbles: A Four-Stage Par
 
 ```{r, echo = FALSE, results = 'hide', include = TRUE, eval = FALSE}
 install.packages("bbdetection")
-install.packages("gplots")
+install.packages("gplots", repos = "https://cloud.r-project.org")
 install.packages("bruceR")
 install.packages("bsts")
 install.packages("cpm")
@@ -2146,5 +2146,6 @@ To ensure full reproducibility, the following chunk displays the R version, plat
 ```{r session-info}
 sessionInfo()
 ```
+
 
 
