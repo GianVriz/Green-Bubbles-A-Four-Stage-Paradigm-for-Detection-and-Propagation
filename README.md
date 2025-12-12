@@ -13,7 +13,7 @@ The repository includes the following folders.
  * *[Code and data](https://github.com/GianVriz/Green-Bubbles-A-Four-Stage-Paradigm-for-Detection-and-Propagation/tree/main/Code-and-Data)* \
    Full version of the code and data.
 
-We recommend reproducing the paper’s results on a neutral platform by importing this repository into Posit Cloud, or alternatively by using the container available on Docker Hub
+We recommend reproducing the paper’s results on a neutral platform by importing this repository into Posit Cloud, or alternatively by using the container available on Docker Hub.
 
 [Docker container](https://hub.docker.com/repository/docker/gianvriz/green_bubbles/general)
 
